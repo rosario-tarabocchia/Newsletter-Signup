@@ -1,4 +1,4 @@
-const dotenv = require('dotenv').config();
+require('dotenv').config();
 const express = require("express");
 const https = require("https");
 const client = require("@mailchimp/mailchimp_marketing");
@@ -57,9 +57,6 @@ app.post("/", function(req, res){
   };
 
   run().catch(e => res.sendFile(__dirname + "/Failure.html"));
-
-
-
 
 });
 
